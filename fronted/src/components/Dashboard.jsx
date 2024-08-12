@@ -11,7 +11,7 @@ function Dashboard() {
 
   useEffect(() => {
     // Fetch banner settings from the backend when the component mounts
-    axios.get('http://localhost:5000/api/banner')
+    axios.get('https://banner-tau.vercel.app/api/banner')
       .then(response => {
         setBannerSettings(response.data);
       })
@@ -43,7 +43,7 @@ function Dashboard() {
   };
 
   const updateBanner = () => {
-    axios.post('http://localhost:5000/api/banner', bannerSettings)
+    axios.post('https://banner-tau.vercel.app/api/banner', bannerSettings)
       .then(response => {
         alert('Banner updated successfully');
       })
